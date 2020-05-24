@@ -1,0 +1,10 @@
+@isTest
+private class WarehouseCalloutServiceTest {
+    @isTest static  void testWarehouseCalloutService() {
+        // Create the mock response based on a static resource
+		Test.startTest();
+        Test.setMock(HttpCalloutMock.class, new WarehouseCalloutServiceMock());
+ 		WarehouseCalloutService.runWarehouseEquipmentSync();
+        Test.stopTest();
+    }   
+}
